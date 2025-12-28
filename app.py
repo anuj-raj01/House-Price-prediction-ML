@@ -16,8 +16,11 @@ st.sidebar.image('https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyajczcTNpM294
 all_value = []
 
 for i in X:
-  ans = st.sidebar.slider(f' Select {i} value')
+  min_value = int(X[i].min())
+  max_value = int(X[i].max())
+  ans = st.sidebar.slider(f' Select {i} value ',min_value, max_value)
   all_value.append(ans)
 
-st.write(all_value)
+# st.write(all_value)
+
 
